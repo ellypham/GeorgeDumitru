@@ -1,0 +1,527 @@
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block; }
+
+audio, canvas, video {
+  display: inline-block; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden] {
+  display: none; }
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+a:focus {
+  outline: thin dotted; }
+
+a:active, a:hover {
+  outline: 0; }
+
+h1 {
+  font-size: 2em; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b, strong {
+  font-weight: 700; }
+
+dfn {
+  font-style: italic; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+q {
+  quotes: \201C \201D \2018 \2019; }
+
+small {
+  font-size: 80%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -.5em; }
+
+sub {
+  bottom: -.25em; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em; }
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0; }
+
+button, input {
+  line-height: normal; }
+
+button, html input[type=button],
+input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled], input[disabled] {
+  cursor: default; }
+
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  padding: 0; }
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box; }
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+textarea {
+  overflow: auto;
+  vertical-align: top; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body, figure {
+  margin: 0; }
+
+legend, button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+* {
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  max-width: 100%;
+  margin-top: -20px;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem; }
+
+h1, h2, h3, h4, h5, p {
+  margin: 0;
+  padding: 0;
+  padding: 5px; }
+
+h2, h4, h5 {
+  font-family: "Amaranth", sans-serif;
+  color: #DBA94B; }
+
+h1, p {
+  color: #5D524C; }
+
+#highlights, #aboutMe, .service, #work, #givingBack, .givingBackGallery, .hobbiesSection, #email, #contact {
+  padding-top: 50px;
+  padding-bottom: 50px; }
+
+.charityGallery {
+  padding-top: 50px; }
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto; }
+  .container h1 {
+    text-align: center; }
+
+.topLogo {
+  margin-top: 20px;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%; }
+  .topLogo img {
+    width: 70px;
+    height: 50px; }
+
+.nav {
+  width: 50%; }
+
+nav {
+  width: 100%;
+  margin-top: 20px;
+  position: fixed;
+  background: white;
+  padding: 0 30px 0 25px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  z-index: 2; }
+  nav ul {
+    margin-top: 40px;
+    display: -ms-flexbox;
+    display: flex; }
+
+ul {
+  list-style: none;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  margin-left: 250px; }
+
+a {
+  text-decoration: none;
+  color: #DBA94B; }
+
+.fa-bars {
+  display: none; }
+
+.flexplicit {
+  display: -ms-flexbox !important;
+  display: flex !important; }
+
+#hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), rgba(0, 0, 0, 0.3) url(../images/100smiles1.jpg) no-repeat center;
+  background-size: cover;
+  max-width: 100%;
+  height: 600px;
+  background-color: #5D524C;
+  background-blend-mode: luminosity;
+  padding-top: 15%; }
+
+#heroTitle {
+  width: 50%;
+  margin-top: 100px; }
+  #heroTitle h1 {
+    color: white;
+    text-align: left; }
+  #heroTitle h2 {
+    text-align: left; }
+
+.hobbiesSection {
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -ms-flexbox;
+  display: flex;
+  height: 40%; }
+  .hobbiesSection h2 {
+    padding-top: 60px; }
+
+.hob1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/giving.jpg) center no-repeat;
+  background-size: cover;
+  text-align: center;
+  width: 25%; }
+
+.hob2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/cycling.jpg) center no-repeat;
+  background-size: cover;
+  text-align: center;
+  width: 25%; }
+
+.hob3 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/creating.jpg) center no-repeat;
+  background-size: cover;
+  text-align: center;
+  width: 25%; }
+
+.hob4 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/learning.jpg) center no-repeat;
+  background-size: cover;
+  text-align: center;
+  width: 25%; }
+
+.row_1 {
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 30px; }
+
+.service-col {
+  width: 33.3%;
+  padding: 10px; }
+
+.bline {
+  border-bottom: 1px solid lightGrey; }
+
+.rline {
+  border-right: 1px solid lightGrey; }
+
+.highlight-row {
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  align: center; }
+
+.highlight-col {
+  width: 25%;
+  padding: 15px;
+  text-align: center; }
+  .highlight-col img {
+    width: 60px;
+    height: auto;
+    text-align: center; }
+
+#work {
+  background: #F6F6F6; }
+
+.works-row {
+  width: 100%;
+  margin: 0 auto;
+  display: -ms-flexbox;
+  display: flex; }
+
+.works-col {
+  width: 500px;
+  height: 320px; }
+  .works-col img {
+    width: 100%;
+    height: auto; }
+
+.charityGallery {
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -ms-flexbox;
+  display: flex; }
+  .charityGallery h2 {
+    padding-top: 25%;
+    color: white; }
+
+.charity1 {
+  background: url(../images/100smiles01.jpg) center no-repeat;
+  background-size: cover;
+  text-align: center;
+  height: 30%;
+  width: 25%; }
+
+.charity2 {
+  background: url(../images/100smiles02.jpg) center no-repeat;
+  background-size: cover;
+  text-align: center;
+  height: 30%;
+  width: 25%; }
+
+.charity3 {
+  background: url(../images/china6.jpg) center no-repeat;
+  background-size: cover;
+  text-align: center;
+  height: 30%;
+  width: 25%; }
+
+.charity4 {
+  background: url(../images/china8.jpg) center no-repeat;
+  background-size: cover;
+  text-align: center;
+  height: 30%;
+  width: 25%; }
+
+.charity5 {
+  background: url(../images/china2.jpg) center no-repeat;
+  background-size: cover;
+  text-align: center;
+  height: 30%;
+  width: 25%; }
+
+.charity6 {
+  background: url(../images/china15.jpg) center no-repeat;
+  background-size: cover;
+  text-align: center;
+  height: 30%;
+  width: 25%; }
+
+.charity7 {
+  background: url(../images/100smiles15.jpg) center no-repeat;
+  background-size: cover;
+  text-align: center;
+  height: 30%;
+  width: 25%; }
+
+.charity8 {
+  background: url(../images/china17.jpg) center no-repeat;
+  background-size: cover;
+  text-align: center;
+  height: 30%;
+  width: 25%; }
+
+.charity9 {
+  background: url(../images/china10.jpg) center no-repeat;
+  background-size: cover;
+  text-align: center;
+  height: 30%;
+  width: 25%; }
+
+.charity10 {
+  background: url(../images/china12.jpg) center no-repeat;
+  background-size: cover;
+  text-align: center;
+  height: 30%;
+  width: 25%; }
+
+.charity11 {
+  background: url(../images/china9.jpg) center no-repeat;
+  background-size: cover;
+  text-align: center;
+  height: 30%;
+  width: 25%; }
+
+.charity12 {
+  background: url(../images/100smiles04.jpg) center no-repeat;
+  background-size: cover;
+  text-align: center;
+  height: 30%;
+  width: 25%; }
+
+.charity13 {
+  background: url(../images/100smiles08.jpg) center no-repeat;
+  background-size: cover;
+  text-align: center;
+  height: 30%;
+  width: 25%; }
+
+.charity14 {
+  background: url(../images/100smiles10.jpg) center no-repeat;
+  background-size: cover;
+  text-align: center;
+  height: 30%;
+  width: 25%; }
+
+.charity15 {
+  background: url(../images/100smiles11.jpg) center no-repeat;
+  background-size: cover;
+  text-align: center;
+  height: 30%;
+  width: 25%; }
+
+.charity16 {
+  background: url(../images/100smiles17.jpg) center no-repeat;
+  background-size: cover;
+  text-align: center;
+  height: 30%;
+  width: 25%; }
+
+#email {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 2%;
+  background: #F6F6F6; }
+  #email button {
+    margin-top: 2%;
+    margin-bottom: 2%; }
+
+#contact {
+  width: 100%; }
+
+.contactForm {
+  width: 80%;
+  display: -ms-flexbox;
+  display: flex;
+  height: 380px;
+  margin: 0 auto;
+  margin-top: 50px; }
+
+.contactInfo {
+  width: 40%;
+  margin-left: 20%; }
+
+form {
+  width: 50%;
+  float: left; }
+
+input, textarea {
+  float: left;
+  font-size: 20px;
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.5rem 0;
+  background: white; }
+
+textarea {
+  height: 150px; }
+
+footer {
+  background: #5D524C;
+  width: 100%;
+  margin: 0 auto; }
+  footer p {
+    text-align: center;
+    color: #DBA94B;
+    padding: 40px; }
+
+@media all and (max-width: 1148px) {
+  .nav ul {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: -250;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        -ms-grid-row-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center; }
+  .nav ul li {
+    -ms-flex: 1 0 auto;
+        flex: 1 0 auto; }
+  .nav li a {
+    color: black;
+    font-size: 2.5rem; }
+  .fa-bars {
+    display: inline-block;
+    float: right;
+    cursor: pointer;
+    padding-top: 30px;
+    color: #DBA94B; }
+  .container {
+    padding: 30px; }
+  #highlights, #aboutMe, .service, #work, #givingBack, .givingBackGallery, .hobbiesSection, #email, #contact {
+    padding-top: 10px;
+    padding-bottom: 10px; } }
+
+@media all and (max-width: 940px) {
+  .highlight-col {
+    width: 25%;
+    text-align: center; }
+    .highlight-col img {
+      width: 50px;
+      height: auto;
+      text-align: center; }
+  #highlights, #aboutMe, .service, #work, #givingBack, .givingBackGallery, .hobbiesSection, #email, #contact {
+    padding-top: 0px;
+    padding-bottom: 0px; } }

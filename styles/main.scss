@@ -1,0 +1,586 @@
+@import 'setup';
+
+//DESIGN ELEMENTS
+
+//FONT STYLES
+$headFont: 'Amaranth', sans-serif;
+//Amaranth
+//Didact Gothic
+$bodyFont: 'Titillium Web', sans-serif;
+//Titillium Web
+//Arimo
+
+//COLORS
+
+$gold: #DBA94B;
+$darkBrown: #5D524C;
+$lightGrey: #F6F6F6;
+$grey: #707070;
+$backWhite: rgb(249,249,249);
+$white: rgb(255,255,255);
+
+//@mixins
+@mixin fontSize($scale){
+	font-size: $scale * 1px;
+	font-size: ($scale/10) * 1rem;
+}
+
+@mixin row() {
+  font-size: 0;
+}
+
+@mixin col($col, $sum, $gap: 1em, $align: top) {
+  width: 100%;
+  font-size: 16px;
+  display: inline-block;
+  box-sizing: border-box;
+  padding-left: if($first, 0, $gap);
+  padding-right: if($last, 0, $gap);
+
+  @media only screen and (min-width: 768px) {
+    width: percentage($col/$sum);
+    vertical-align: $align;
+  }
+}
+
+
+//COMMON STYLES
+
+html{
+	font-size: 62.5%;
+}
+
+body{
+	max-width: 100%;
+	margin-top: -20px;
+	font-family: $bodyFont;
+	@include fontSize(16);
+}
+
+h1, h2, h3, h4, h5, p {
+	margin: 0;
+	padding: 0;
+	padding: 5px;
+}
+
+h2, h4, h5 {
+	font-family: $headFont;
+	color: $gold;
+}
+
+h1, p{
+	color: $darkBrown;
+}
+
+// img{
+// 	max-width: 100%;
+// 	height: auto;
+// }
+
+#highlights, #aboutMe, .service, #work, #givingBack, .givingBackGallery, .hobbiesSection, #email,#contact{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.charityGallery{
+	padding-top: 50px;
+}
+
+.container {
+	max-width: 1000px;
+	margin: 0 auto;
+	h1{
+		text-align: center;
+	}
+}
+
+.topLogo{
+	margin-top: 20px;	
+	display: flex;
+	width: 50%;
+	img{
+		width: 70px;
+		height: 50px;
+	}
+}	
+
+.nav{
+	width: 50%;
+}
+
+nav{
+	width: 100%;
+	margin-top: 20px;
+	position: fixed;
+	background: $white;
+	padding: 0 30px 0 25px;
+	display: flex;
+	justify-content: space-between;
+	// margin: 0 auto;
+	ul{
+		margin-top: 40px;
+		display: flex;
+	}
+	z-index: 2;
+}
+
+
+ul{
+	list-style: none;
+	justify-content: space-between;
+	margin-left: 250px;
+}
+
+a{
+	text-decoration: none;
+	color: $gold;
+}
+
+.fa-bars{
+	display: none;
+}
+
+.flexplicit{
+	display: flex!important;
+}
+
+#hero{
+	background: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)),rgba(0,0,0,0.30) url(../images/100smiles1.jpg) no-repeat center;
+	background-size: cover;
+	max-width: 100%;
+	height: 600px;
+	background-color: $darkBrown;	
+	background-blend-mode: luminosity;
+	// background-blend-mode: screen;
+	padding-top: 15%;
+}
+
+#heroTitle{
+	width: 50%;
+	margin-top: 100px;
+	h1{
+		color: white;
+		text-align: left;
+	}
+	h2{
+		text-align: left;
+	}
+}
+
+//About Hobbies
+
+.hobbiesSection{
+	width: 100%;
+	flex-wrap: wrap;
+	display: flex;
+	height: 40%;
+	h2{
+		padding-top: 60px;
+	}
+}
+
+.hob1{
+	background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../images/giving.jpg) center no-repeat;
+	background-size: cover;
+	text-align: center;
+	// height: 100%;
+	width: 25%;
+}
+
+.hob2{
+	background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../images/cycling.jpg) center no-repeat;
+	background-size: cover;
+	text-align: center;
+	// height: 100%;
+	width: 25%;
+
+}
+
+.hob3{	
+	background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../images/creating.jpg) center no-repeat;
+	background-size: cover;
+	text-align: center;
+	// height: 100%;
+	width: 25%;
+}
+
+.hob4{
+	background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../images/learning.jpg) center no-repeat;
+	background-size: cover;
+	text-align: center;
+	// height: 100%;
+	width: 25%;
+}
+
+//What George is good For
+.row_1{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 30px;
+}
+
+.service-col{
+	width: 33.3%;
+	padding: 10px;
+}
+
+//What George is good for borderlines
+
+.bline{
+	border-bottom: 1px solid lightGrey;
+}
+
+.rline{
+	border-right: 1px solid lightGrey;
+}
+
+//Highlights (Icons)
+.highlight-row{
+	width: 100%;
+	display: flex;
+	align: center;
+}
+
+.highlight-col{
+	width: 25%;
+	padding: 15px;
+	text-align: center;
+	img{
+		width: 60px;
+		height: auto;
+		text-align: center;
+	}
+}
+
+//Work
+
+#work{
+	background: $lightGrey;
+}
+
+.works-row{
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+}
+
+.works-col{
+	width: 500px;
+	height: 320px;
+	img{
+		width:100%;
+		height: auto;
+	}
+}
+
+//Giving Back
+
+.charityGallery{
+	width: 100%;
+	flex-wrap: wrap;
+	display: flex;
+	h2{
+		padding-top: 25%;
+		color: white;
+	}
+
+}
+
+// .charity{
+// 	background-size: cover;
+// 	text-align: center;
+// 	height: 30%;
+// 	width: 25%;
+// }
+
+.charity1{
+	background: url(../images/100smiles01.jpg) center no-repeat;
+	background-size: cover;
+	text-align: center;
+	height: 30%;
+	width: 25%;
+}
+
+.charity2{
+	background: url(../images/100smiles02.jpg) center no-repeat;
+	background-size: cover;
+	text-align: center;
+	height: 30%;
+	width: 25%;
+}
+
+.charity3{	
+	background: url(../images/china6.jpg) center no-repeat;
+	background-size: cover;
+	text-align: center;
+	height: 30%;
+	width: 25%;
+}
+
+.charity4{
+	background: url(../images/china8.jpg) center no-repeat;
+	background-size: cover;
+	text-align: center;
+	height: 30%;
+	width: 25%;
+}
+
+.charity5{
+	background: url(../images/china2.jpg) center no-repeat;
+	background-size: cover;
+	text-align: center;
+	height: 30%;
+	width: 25%;
+}
+
+.charity6{
+	background: url(../images/china15.jpg) center no-repeat;
+	background-size: cover;
+	text-align: center;
+	height: 30%;
+	width: 25%;
+}
+
+.charity7{	
+	background: url(../images/100smiles15.jpg) center no-repeat;
+	background-size: cover;
+	text-align: center;
+	height: 30%;
+	width: 25%;
+}
+
+.charity8{
+	background: url(../images/china17.jpg) center no-repeat;
+	background-size: cover;
+	text-align: center;
+	height: 30%;
+	width: 25%;
+}
+
+.charity9{
+	background: url(../images/china10.jpg) center no-repeat;
+	background-size: cover;
+	text-align: center;
+	height: 30%;
+	width: 25%;
+}
+
+.charity10{
+	background: url(../images/china12.jpg) center no-repeat;
+	background-size: cover;
+	text-align: center;
+	height: 30%;
+	width: 25%;
+}
+
+.charity11{	
+	background: url(../images/china9.jpg) center no-repeat;
+	background-size: cover;
+	text-align: center;
+	height: 30%;
+	width: 25%;
+}
+
+.charity12{
+	background: url(../images/100smiles04.jpg) center no-repeat;
+	background-size: cover;
+	text-align: center;
+	height: 30%;
+	width: 25%;
+}
+
+.charity13{
+	background: url(../images/100smiles08.jpg) center no-repeat;
+	background-size: cover;
+	text-align: center;
+	height: 30%;
+	width: 25%;
+}
+
+.charity14{
+	background: url(../images/100smiles10.jpg) center no-repeat;
+	background-size: cover;
+		text-align: center;
+		height: 30%;
+		width: 25%;
+}
+
+.charity15{	
+	background: url(../images/100smiles11.jpg) center no-repeat;
+	background-size: cover;
+		text-align: center;
+		height: 30%;
+		width: 25%;
+}
+
+.charity16{
+	background: url(../images/100smiles17.jpg) center no-repeat;
+	background-size: cover;
+		text-align: center;
+		height: 30%;
+		width: 25%;
+}
+
+#email{
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	margin-bottom: 2%;
+	background: $lightGrey;
+	button{
+		margin-top: 2%;
+		margin-bottom: 2%;
+	}
+}
+
+
+#contact{
+	width: 100%;
+}
+
+.contactForm{
+	width: 80%;
+	display: flex;
+	height: 380px;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+
+.contactInfo{
+	width: 40%;
+	margin-left: 20%;
+}
+
+form{
+	width: 50%;
+	float: left;
+}
+
+input, textarea{
+	float: left;
+	font-size: 20px;
+	width: 100%;
+	margin: 0.5rem 0;
+	padding: 0.5rem 0;
+	background: white;
+}
+
+textarea{
+	height: 150px;
+}
+	
+
+footer{
+	p{
+		text-align: center;
+		color: $gold;
+		padding: 40px;
+	}
+	background: $darkBrown;
+	width: 100%;
+	margin: 0 auto;
+}
+
+
+// Responsive design
+
+//Desktop and UP
+@media all and (max-width: 1390px) {
+
+}
+
+@media all and (max-width: 1148px){
+	.nav ul{
+		display: none;
+		position: fixed;
+		top:0;
+		left: -250; 
+		height: 100%;
+		width: 100%;
+		background: rgba(255,255,255,0.7);
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.nav ul li{
+		flex: 1 0 auto;
+	}
+
+	.nav li a{
+		color: black;
+		font-size: 2.5rem;
+	}
+
+	.fa-bars{
+		display: inline-block;
+		float: right;
+		cursor: pointer;
+		padding-top: 30px;
+		color: $gold;
+	}
+	.container{
+		padding: 30px;
+	}
+	#highlights, #aboutMe, .service, #work, #givingBack, .givingBackGallery, .hobbiesSection, #email, #contact {
+	    padding-top: 10px;
+	    padding-bottom: 10px;
+	}
+
+}
+
+@media all and (max-width: 1024px) { 
+    
+}
+
+//Small Desktop and down
+@media all and (max-width: 940px) {
+	.highlight-col{
+		width: 25%;
+		// padding: 15px;
+		text-align: center;
+		img{
+			width: 50px;
+			height: auto;
+			text-align: center;
+		}
+	}
+	#highlights, #aboutMe, .service, #work, #givingBack, .givingBackGallery, .hobbiesSection, #email, #contact {
+	    padding-top: 0px;
+	    padding-bottom: 0px;
+	}
+}
+
+//Mobile only
+@media all and (max-width: 768px) {
+    
+}
+
+//Mobile small
+@media all and (max-width: 667px) {
+
+}
+
+//Mobile and down
+@media all and (max-width: 480px) {
+    
+}
+
+@media all and (max-width: 320px) {
+   
+   
+}
+
+// $mobile-and-down: "screen and (max-width: 480px)"
+// $mobile-small: "screen and (max-width: 600px)"
+// $mobile-only: "screen and (max-width: 767px)"
+// $small-desktop-and-down: "screen and (max-width: 950px)"
+// $tablet-and-up: "screen and (min-width: 768px)"
+// $desktop-and-up: "screen and (min-width: 1100px)"
+
+
+
+
+
+
